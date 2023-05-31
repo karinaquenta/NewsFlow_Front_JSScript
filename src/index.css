@@ -1,0 +1,40 @@
+.newsflow {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.newsflow-text {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+.news-item .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-item .source {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.news-item .description {
+  font-size: 16px;
+}
+
+.news-item .publishedAt {
+  font-size: 12px;
+  color: #888;
+}
