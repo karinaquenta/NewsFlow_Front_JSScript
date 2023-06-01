@@ -17,3 +17,10 @@ const List = <T,> ({ items, render}: ListProps<T>) => {
     )
 }
 export default List
+
+{/* <div class="news-item" id="newsInfo">
+  <h2 class="title">News Title</h2>
+  <p class="source">News Source</p>
+  <p class="description">News Description</p>
+  <p class="publishedAt">Published Date</p>
+</div> */}

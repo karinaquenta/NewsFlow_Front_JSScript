@@ -1,18 +1,27 @@
-interface postItem{
-    id:number,
-    body:string,
-    author:string,
-    timestamp:string
-}
-export default function Post(props:postItem){
-    
+/*
+import { Link } from 'react-router-dom'
 
-    return(
-        <>
-        <h3>Post</h3>
-        <p>{props.author}</p>
-        <p>{props.body}</p>
-        <p>{props.timestamp}</p>
-        </>
-    )
+export interface Postable {
+  id: string;
+  author: string;
+  timestamp: Date;
+  body: string;
 }
+
+interface PostProps {
+  key: string;
+  post: Postable;
+}
+
+export default function Post(props: PostProps) {
+  return (
+    <> 
+      <Link to={`/user/${props.post.author}`}>
+        <p>{props.post.author}</p>
+      </Link>
+      <p>{props.post.body}</p>
+      <p>{props.post.timestamp.toLocaleString()}</p>
+    </>
+  );
+}
+*/

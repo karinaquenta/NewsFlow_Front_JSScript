@@ -1,37 +1,44 @@
-import Post from "../components/Post";
+/*
+import { useState, useEffect } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
+import Body from '../components/Body';
+import Post from '../components/Post';
+import { Postable } from '../components/Post';
 
+const base_api_url = import.meta.env.VITE_APP_BASE_API
 
+export default function Posts() {
+  console.log(base_api_url)
+  const [postsArray, setPostsArray] = useState<Postable[]>([]);
 
+  useEffect(() => {
+    (async () => {
+      const res = await fetch(
+        `${base_api_url}/posts`
+      );
+      if (res.ok) {
+        const data = await res.json();
+        setPostsArray(data);
+      }
+    })();
+  }, []);
 
-export default function Posts(){
-    const postsArray = [{
-        id:1,
-        body: 'Cool Info!',
-        author: 'sean',
-        timestamp: new Date()
-    },{
-        id:2,
-        body: 'Best news site ever!',
-        author: 'ben',
-        timestamp: new Date()
-    },{
-        id:3,
-        body: 'Thanks!',
-        author: 'gian',
-        timestamp: new Date()
-    },{
-        id:4,
-        body: 'NewsFlow is amazing!',
-        author: 'dylan',
-        timestamp: new Date()
-    }]
-
-
-    return(
-        <>
-        {postsArray.map((postItem)=>{
-               return <Post id={postItem.id}body={postItem.body} author={postItem.author} timestamp={postItem.timestamp.toLocaleString()}/>
+  return (
+    <>
+      
+      <Body sidebar>
+        {postsArray.length === 0 ? (
+          <Spinner animation="border" />
+        ) : (
+          <>
+          <h3>Posts</h3>
+            {postsArray.map((post) => {
+              return <Post post={post} key={post.id} />;
             })}
-        </>
-    )
+          </>
+        )}
+      </Body>
+    </>
+  );
 }
+*/
