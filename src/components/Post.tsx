@@ -1,4 +1,3 @@
-/*
 import { Link } from 'react-router-dom'
 
 export interface Postable {
@@ -24,4 +23,3 @@ export default function Post(props: PostProps) {
     </>
   );
 }
-*/

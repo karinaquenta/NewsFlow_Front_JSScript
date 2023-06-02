@@ -9,6 +9,10 @@ import News from './pages/LatestNews';
 // import { Navbar } from 'react-bootstrap';
 import NavbarBootstrap from './components/Navbar';
 import HeadlinesContainer from './pages/LatestNews';
+import LatestNews from './pages/LatestNews';
+import UserPage from './components/UserPage';
+import AllPosts from './components/Allposts';
+// import UserPage from '../components/UserPage';
  
 
 function App() {
@@ -24,11 +28,12 @@ function App() {
     
       <BrowserRouter>
         <Routes>
-          {/* <Route path='/' element={ <Posts /> }/>
-          <Route path='/posts' element={ <Posts /> }/> */}
+          <Route path='/' element={ <AllPosts /> }/>
+          <Route path='/posts' element={ <AllPosts /> }/>
           <Route path='/news' element={ <News /> }/>
           <Route path='/login' element={ <LoginPage /> }/>
-          {/* <Route path='/user/:username' element={ <UserPage /> } /> */}
+          <Route path='/ln' element={ <LatestNews /> }/>
+          <Route path='/user/:username' element={ <UserPage /> } />
           <Route path='*' element={ <Navigate to='/' />}/>
         </Routes>
       </BrowserRouter>

@@ -1,36 +1,45 @@
+// import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import nflogo from "../static/img/nflogo.png"
+import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../module/UserProvider';
+import { useContext } from 'react';
+// import Button from 'react-bootstrap/Button';
+
 
 import '/src/index.css'
 
-const buttonText = {
-    color:"black",
-    fontSize: "18px"
-}
+// const buttonText = {
+//     color:"black",
+//     fontSize: "18px"
+// }
 
 export default function NavbarBootstrap () {
+  const { user } = useContext(AuthContext);
+  console.log(user);
     return(
-     
-           <Navbar sticky='top' bg="dark" variant="dark">
-             <Container>
-               <Navbar.Brand href="#home">NewsFlow: Discover,Explore ,and Stay Informed </Navbar.Brand>
-               <Nav className="me-auto">
-                 
-                 <Button href="/" variant="outline-danger" style={buttonText}>Home</Button>{' '}
-                 <Button href="/news" variant="outline-warning" style={buttonText}>News</Button>{' '}
-                 <Button href="/search" variant="outline-danger" style={buttonText}>Search</Button>{' '}
-                 <Button href="/login" variant="outline-warning" style={buttonText}>Login</Button>{' '}
-                 <Button href="/register" variant="outline-danger" style={buttonText}>Register</Button>{' '}
-                 
-               </Nav>
-             </Container>
-           </Navbar>
-    
-       
-       );
-     }
+      <Navbar sticky='top' bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#"><img src={nflogo} height="100px" alt="Logo" /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="ml-auto">
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/news">News</Nav.Link>
+          <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
+          <Nav.Link href="/search">Search</Nav.Link>
+
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
 
      /*
     <Nav.Link href="/register">Sign up!</Nav.Link>
