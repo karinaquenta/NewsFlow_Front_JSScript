@@ -21,9 +21,13 @@ export default function LoginPage() {
   const navigate = useNavigate()
   
   useEffect(()=>{
-    if(user.token) navigate('/')
+    if (user.token){
+      localStorage.setItem('token', JSON.stringify(user.token))
+      localStorage.setItem('username', JSON.stringify(user.username))
+    }
+    if(user.token || localStorage.getItem('token')) navigate('/')
   },[user])
-  
+    
   async function handleLoginForm(e:React.FormEvent<HTMLFormElement>){
     e.preventDefault()
     const res = await fetch(`${base_api_url}/verifyuser`,{

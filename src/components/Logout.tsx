@@ -16,6 +16,9 @@ export default function Logout() {
       username:'',
       token:''
     })
+    localStorage.removeItem('token')
+    localStorage.removeItem('Usertoken')
+    localStorage.removeItem('username')
     navigate('/login')
   })
   

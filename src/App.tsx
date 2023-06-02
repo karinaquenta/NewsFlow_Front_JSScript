@@ -22,8 +22,9 @@ function App() {
     
     
     <Container className='App'>
+       <Header />
     <NavbarBootstrap />
-    <Header />
+    
     <HeadlinesContainer />
     
       <BrowserRouter>
