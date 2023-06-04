@@ -31,7 +31,7 @@ export default function CreatePost() {
 
   return (
     <form onSubmit={handlePostForm}>
-        <label>Create your Post:<br/>
+        <label>Create a Post:<br/>
           <input type="text" ref={postField} placeholder="What would you like to share today? "/>
         </label>
         <button>Post</button>

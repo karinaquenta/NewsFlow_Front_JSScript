@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap"
+import { Card, Col, Row } from "react-bootstrap"
 import Container from "react-bootstrap/esm/Container"
 
 
@@ -15,9 +15,11 @@ interface Props {
 export default function HeadlinesContainer({ headlines }: Props) {
     return (
     <Container>
-        <div id="headlines-container">
+        <Row>
+        
             {headlines.map((headline, index) => (
-                <Card key={index} style={{ width: '18rem', marginBottom: '1rem' }}>
+                <Col key={index} sm={12} md={6} lg={4} xl={3}>
+                <Card style={{ width: '18rem', marginBottom: '1rem' }}>
                 <Card.Body>
                     <Card.Title>{headline.title}</Card.Title>
                     <Card.Text>{headline.description}</Card.Text>
@@ -26,8 +28,9 @@ export default function HeadlinesContainer({ headlines }: Props) {
                     </Card.Link>
                 </Card.Body>
             </Card>
+            </Col>
         ))}
-        </div>
+        </Row>
     </Container>
      );
  }        

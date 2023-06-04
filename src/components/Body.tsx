@@ -1,19 +1,19 @@
 import Container from 'react-bootstrap/Container';
 import Stack from 'react-bootstrap/Stack';
-import Sidebar from './Sidebar';
+import Header from './Header';
 import CreatePost from './CreatePost';
 
 interface BodyProps {
   createpost: boolean,
-  sidebar: boolean;
+  header : boolean;
   children: JSX.Element | JSX.Element[];
 }
 
-export default function Body({ createpost, sidebar, children }: BodyProps) {
+export default function Body({ createpost, header, children }: BodyProps) {
   return (
     <Container>
       <Stack direction="vertical">
-        {sidebar && <Sidebar />}
+        {header && <Header />}
         <Container>{ createpost && <CreatePost /> } {children}</Container>
       </Stack>
     </Container>

@@ -1,8 +1,9 @@
 import { useContext, useEffect } from "react"
 // import { AuthContext } from "../contexts/UserProvider"
-import { useNavigate } from "react-router-dom"
+
 import Spinner from "react-bootstrap/Spinner"
 import { AuthContext } from "../module/UserProvider"
+import { useNavigate } from "react-router-dom"
 // import { AuthContext } from "../contexts/UserProvider"
 
 export default function Logout() {
@@ -17,7 +18,6 @@ export default function Logout() {
       token:''
     })
     localStorage.removeItem('token')
-    localStorage.removeItem('Usertoken')
     localStorage.removeItem('username')
     navigate('/login')
   })
