@@ -4,11 +4,14 @@ import App from './App.tsx'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthProvider from './module/UserProvider.tsx';
+import LikedProvider from './module/LikedProvider.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <AuthProvider>
+    <LikedProvider>
     <App />
+    </LikedProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

@@ -2,15 +2,9 @@ import Body from '../components/Body';
 import { useContext, useEffect, useRef } from 'react'
 import { AuthContext } from '../module/UserProvider';
 import { useNavigate } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 
-// export default function LoginPage() {
-//   return (
-//     <Body sidebar={ false }>
-//       <h2>LoginPage</h2>
-//       <form action=""></form>
-//     </Body>
-//   );
-// }
+
 
 const base_api_url = import.meta.env.VITE_APP_BASE_API
 
@@ -18,6 +12,7 @@ export default function LoginPage() {
   const usernameField = useRef<HTMLInputElement>(null)
   const passwordField = useRef<HTMLInputElement>(null)
   const { user, setUser } = useContext(AuthContext)
+  //islikedcontent enter her
   const navigate = useNavigate()
   
   useEffect(()=>{
@@ -52,17 +47,25 @@ export default function LoginPage() {
   }
   
   return (
-    <Body createpost={false} header={ false }>
-      <h2>Login Page</h2>
-      <form onSubmit={handleLoginForm}>
-        <label>Username:<br/>
-          <input type="text" ref={usernameField}/>
-        </label><br/><br/>
-        <label>Password:<br/>
-          <input type="password" ref={passwordField}/>
-        </label><br/><br/>
-        <button>Sign In</button>
-      </form>
-    </Body>
+    <div className="login-container">
+    <Container>
+      <Row>
+        <Col>
+          <Body createpost={false} header={false}>
+            <h2>Login Page</h2>
+            <form onSubmit={handleLoginForm}>
+              <label>Username:<br/>
+                <input type="text" ref={usernameField}/>
+              </label><br/><br/>
+              <label>Password:<br/>
+                <input type="password" ref={passwordField}/>
+              </label><br/><br/>
+              <button>Sign In</button>
+            </form>
+          </Body>
+        </Col>
+      </Row>
+    </Container>
+  </div>
   );
 }

@@ -3,7 +3,7 @@ import { useContext, useEffect, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../module/UserProvider"
 import Body from "../components/Body"
-
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Register() {
   const usernameField = useRef<HTMLInputElement>(null)
@@ -49,20 +49,30 @@ export default function Register() {
   }
 
   return (
-    <Body createpost={false} header={ false }>
-      <h2>Register Page</h2>
-      <form onSubmit={handleRegisterForm}>
-        <label>Username:<br/>
-          <input type="text" ref={usernameField}/>
-        </label><br/><br/>
-        <label>Email:<br/>
-          <input type="email" ref={emailField}/>
-        </label><br/><br/>
-        <label>Password:<br/>
-          <input type="password" ref={passwordField}/>
-        </label><br/><br/>
-        <button>Register</button>
-      </form>
-    </Body>
+    
+    <Container>
+      <Row>
+        <Col>
+        <div className="register-page">
+            <Body createpost={false} header={ false }>
+              <h2>Register Page</h2>
+              <form onSubmit={handleRegisterForm}>
+                <label>Username:<br/>
+                  <input type="text" ref={usernameField}/>
+                </label><br/><br/>
+                <label>Email:<br/>
+                  <input type="email" ref={emailField}/>
+                </label><br/><br/>
+                <label>Password:<br/>
+                  <input type="password" ref={passwordField}/>
+                </label><br/><br/>
+                <button>Register</button>
+              </form>
+            </Body>
+        </div>
+        </Col>
+      </Row>
+    </Container>
+    
   )
 }

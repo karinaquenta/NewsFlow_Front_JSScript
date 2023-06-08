@@ -1,11 +1,5 @@
-
 import { useEffect, useState } from 'react';
 import HeadlinesContainer from '../components/HeadlinesContainer';
-
-// import { Card } from 'react-bootstrap';
-// import callNewsAPI from '../api/NewsAPI';
-// import NewsAPI from 'newsapi';
-
 
 export default function LatestNews(): JSX.Element {
   const [headlines, setHeadlines] = useState<any[]>([]);
@@ -21,8 +15,10 @@ setHeadlines(data.articles)
   }, []);
 
   return (
-    
+    <div className="ln-page">
+    <br/>
+    <h1>Latest News</h1>
     <HeadlinesContainer headlines={headlines} />
-   
+    </div>
   );
 }

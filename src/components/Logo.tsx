@@ -1,25 +1,20 @@
-import Navbar from 'react-bootstrap/Navbar';
-import nflogo from "../static/img/nflogo.png"
-
+import { Card } from 'react-bootstrap';
+import splash from '../static/img/splash.png'
 
 export default function Logo() {
   
   return (
     
-    <Navbar bg="light" className="Logo" >
-   
-      <Navbar.Brand href="#home" className="d-flex justify-content-center">
-            <img
-              src={nflogo}
-              width="300"
-              height="300"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
-        </Navbar.Brand>
+    <>
+      <Card className="text-center custom-bg">
+        <Card.Img variant="top" src={splash} />
+        <Card.Body>
+        <p className="moving-text">Stay in the know, wherever you go!</p>
+          {/* <Card.Text className="logo-text">Stay in the know, wherever you go!</Card.Text> */}
+        </Card.Body>
+      </Card>
       
-    </Navbar>
-  
+    </>
   );
 }
-
+{/* <p className="moving-text">Stay in the know, wherever you go!</p> */}

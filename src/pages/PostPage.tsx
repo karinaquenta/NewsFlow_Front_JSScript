@@ -21,8 +21,7 @@ export default function PostsPage({endpoint,heading}:{endpoint:string,heading:st
         headers:{
           'x-access-token':`Bearer${user.token}`,
         }
-        }
-      );
+      })
       if (res.ok) {
         const data = await res.json();
         setPostsArray(data);
@@ -34,10 +33,12 @@ export default function PostsPage({endpoint,heading}:{endpoint:string,heading:st
     <>
       
       <Body createpost header>
+        
         {postsArray.length === 0 ? (
           <Spinner animation="border" />
         ) : (
           <>
+          
           <h3>{ heading }</h3>
             {postsArray.map((post) => {
               return <Post post={post} key={post.id} />;

@@ -64,13 +64,18 @@ export default function Header  ()  {
                 Login
               </Nav.Link>
             </Nav.Item>
+            {/* <Nav.Item>
+              <Nav.Link as={NavLink} to="/news">
+                NEWS
+              </Nav.Link>
+            </Nav.Item> */}
           </>
         )}
-        <Nav.Item>
+        {/* <Nav.Item>
           <Nav.Link as={NavLink} to="/news">
             News
           </Nav.Link>
-        </Nav.Item>
+        </Nav.Item> */}
         </Nav>
         </Container>
       </Navbar>
@@ -88,7 +93,7 @@ export default function Header  ()  {
             <br />
             <br />
              <Button variant="outline-danger" style={buttonText}>Sign In</Button>{' '}
-                  <Button variant="outline-danger" style={buttonText}>Register</Button>{' '} 
+              <Button variant="outline-danger" style={buttonText}>Register</Button>{' '} 
           {/* </Card.Text>
         </Card.ImgOverlay>
       </Card> 

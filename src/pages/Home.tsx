@@ -1,22 +1,41 @@
+import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
+import world from '../static/img/world.png'
+import Footer from '../components/Footer';
 
-// import HeadlinesContainer from "../components/HeadlinesContainer";
-// import Navbar from "../components/Navbar";
-
-import Navbar from "../components/Navbar";
-
-
-
-
-
-
-
-export default function Home(){
-    return(
-        <>
-        
-        <h3>Welcome to NewsFlow where you can discover, explore, and stay informed!</h3>
-        
-        </>
-    )
-    
+export default function Home() {
+  return (
+    <div className="home-container">
+      <Container>
+        <Row>
+          <Col>
+            {/* Your page content */}
+            <div className="cta-container">
+              <h1>Stay informed with the latest news from around the world!</h1>
+              <br/>
+              <br/>
+              <br/>
+              <img src={world} alt="world" />
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <Link to="/ln" className="cta-link">
+                <button className="cta-button">View Live Top Headlines</button>
+              </Link>
+              <Link to="/news" className="cta-link">
+                <button className="cta-button">Browse News</button>
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      <br/>
+              <br/>
+              <br/>
+              <br/>
+             
+      <Footer />
+    </div>
+  );
 }
