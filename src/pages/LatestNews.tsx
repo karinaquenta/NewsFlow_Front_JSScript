@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import HeadlinesContainer from '../components/HeadlinesContainer';
+import Footer from '../components/Footer';
 
 export default function LatestNews(): JSX.Element {
   const [headlines, setHeadlines] = useState<any[]>([]);
@@ -19,6 +20,12 @@ setHeadlines(data.articles)
     <br/>
     <h1>Latest News</h1>
     <HeadlinesContainer headlines={headlines} />
+    <br/>
+              <br/>
+              <br/>
+              <br/>
+             
+      <Footer />
     </div>
   );
 }

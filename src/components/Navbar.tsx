@@ -40,6 +40,9 @@ export default function Navbar() {
       <Nav.Item>
         <Nav.Link as={NavLink} to="/contact"><FeedbackIcon />Contact Us!</Nav.Link>
       </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/logout"><FeedbackIcon />Logout</Nav.Link>
+      </Nav.Item>
     </Nav>
   );
 }

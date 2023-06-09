@@ -5,6 +5,7 @@ import Post from '../components/Post';
 import { Postable } from '../components/Post';
 import { AuthContext } from '../module/UserProvider';
 
+
 const base_api_url = import.meta.env.VITE_APP_BASE_API
 
 export default function PostsPage({endpoint,heading}:{endpoint:string,heading:string}) {

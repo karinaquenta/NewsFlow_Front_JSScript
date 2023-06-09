@@ -21,32 +21,3 @@ export default function UserPage(){
     </>
   );
 }
-//   const [userPosts, setUserPosts] = useState<Postable[]>([])
-//   const { username } = useParams()
-
-//   useEffect(()=>{
-//     (async ()=>{
-//       const res = await fetch(`${base_api_url}/posts/${username}`)
-//       if(res.ok){
-//         const data = await res.json()
-//         setUserPosts(data)
-//       }
-//     })()
-//   },[])
-
-//   return (
-//     <Body sidebar>
-//       {userPosts.length === 0 ? (
-//         <Spinner animation="border" />
-//         ) : (
-//           <>
-          
-//           <h2>{ username }</h2>
-//             {userPosts.map((post) => {
-//               return <Post post={post} key={post.id} />;
-//             })}
-//           </>
-//         )}
-//     </Body>
-//   )
-// }

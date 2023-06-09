@@ -54,25 +54,25 @@ export default function Register() {
       <Row>
         <Col>
         <div className="register-page">
-            <Body createpost={false} header={ false }>
-              <h2>Register Page</h2>
-              <form onSubmit={handleRegisterForm}>
-                <label>Username:<br/>
-                  <input type="text" ref={usernameField}/>
-                </label><br/><br/>
-                <label>Email:<br/>
-                  <input type="email" ref={emailField}/>
-                </label><br/><br/>
-                <label>Password:<br/>
-                  <input type="password" ref={passwordField}/>
-                </label><br/><br/>
-                <button>Register</button>
-              </form>
-            </Body>
-        </div>
-        </Col>
-      </Row>
-    </Container>
+    <Body createpost={false} header={ false }>
+      <h2>Register Page</h2>
+      <form onSubmit={handleRegisterForm}>
+        <label>Username:<br/>
+          <input type="text" ref={usernameField}/>
+        </label><br/><br/>
+        <label>Email:<br/>
+          <input type="email" ref={emailField}/>
+        </label><br/><br/>
+        <label>Password:<br/>
+          <input type="password" ref={passwordField}/>
+        </label><br/><br/>
+        <button>Register</button>
+      </form>
+    </Body>
+    </div>
+    </Col>
+        </Row>
+      </Container>
     
   )
 }

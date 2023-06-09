@@ -24,7 +24,7 @@ function App() {
         <Logo />
         
         <Routes>
-          <Route path='/' element={ <AllPosts /> }/>
+          <Route path='/' element={ <MyPage /> }/>
           <Route path='/posts' element={ <AllPosts /> }/>
           <Route path='/home' element={ <Home /> }/>
           <Route path='/login' element={ <LoginPage /> }/>

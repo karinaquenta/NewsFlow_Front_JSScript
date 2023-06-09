@@ -3,6 +3,7 @@ import { useContext, useEffect, useRef } from 'react'
 import { AuthContext } from '../module/UserProvider';
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
+import Footer from '../components/Footer';
 
 
 
@@ -66,6 +67,15 @@ export default function LoginPage() {
         </Col>
       </Row>
     </Container>
+    <br/>
+              <br/>
+              <br/>
+              <br/>
+
+              <br/>
+              <br/>
+              <br/>
+      <Footer />
   </div>
   );
 }

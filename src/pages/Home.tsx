@@ -9,7 +9,6 @@ export default function Home() {
       <Container>
         <Row>
           <Col>
-            {/* Your page content */}
             <div className="cta-container">
               <h1>Stay informed with the latest news from around the world!</h1>
               <br/>
